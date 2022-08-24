@@ -74,7 +74,7 @@ document.addEventListener("scroll", ()=>{
         whoamiText.style.animation = 'whoamiTextAppear 1s forwards';
     }
     for (i=0; i<projectsBox.length; i++) {
-        if (projectsBox[i].getBoundingClientRect().bottom < window.innerHeight + 0) {
+        if (projectsBox[i].getBoundingClientRect().bottom < window.innerHeight + 90) {
             projectsBox[i].style.animation = 'projectsBox 1s forwards'
         }
     }
