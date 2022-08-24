@@ -16,12 +16,27 @@ if (navigator.language == 'es-ES') {
 document.getElementById('body').style.height = '100%';
 document.getElementById('body').style.overflowY = 'hidden';
 
-setTimeout(()=> {
-    document.getElementById('loading-container').style.display = 'none';
-    document.getElementById('body').style.height = 'initial';
-    document.getElementById('body').style.overflowY = 'initial';
-    document.getElementById('loading').style.animation = 'none';
-}, 2000)
+function getRandomNumber(min, max) {
+    let randomize = Math.random() * (max - min) + min;
+    return Math.round(randomize);
+}
+
+if (getRandomNumber(0,2) < 2) {
+    setTimeout(()=> {
+        document.getElementById('loading-container').style.display = 'none';
+        document.getElementById('body').style.height = 'initial';
+        document.getElementById('body').style.overflowY = 'initial';
+        document.getElementById('loading').style.animation = 'none';
+    }, 2000)
+} else {
+    setTimeout(()=> {
+        document.getElementById('loading-container').style.display = 'none';
+        document.getElementById('body').style.height = 'initial';
+        document.getElementById('body').style.overflowY = 'initial';
+        document.getElementById('loading').style.animation = 'none';
+    }, 5000)
+}
+
 
 let navBar = document.getElementById("nav");
 let navBarContentContainer = document.querySelectorAll(".nav-content-container")
