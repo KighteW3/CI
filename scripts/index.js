@@ -6,12 +6,19 @@ const languageChanger = ()=> {
     document.querySelector(".introduction-title-link-button").innerHTML = 'Más info';
     document.querySelector(".whoami-title").innerHTML = '¿Quién soy?';
     document.querySelector(".whoami-text").innerHTML = 'Mi nombre es Emanuel Asandei, tengo 18 años y soy un desarrollador web front-end. Suelo dedicarle mucho tiempo a estudiar y practicar con las tecnologías relacionadas al campo y por eso mejoro con creces cada día, hasta la fecha manejo los tres pilares del desarrollo web, es decir; HTML, CSS y JavaScript.';
+    document.querySelector('.projects-title').innerHTML = 'Mis proyectos';
+    document.querySelector('.projects-box-text-paimeman').innerHTML = 'Una página hecha para promocionar un excelente cómic escrito por un buen amigo, la trama va de dos chicos superhéroes.';
+    document.querySelector('.projects-box-text-chess').innerHTML = 'Un trabajo de instituto que voluntariamente hice en formato web, se trata de los sucesos importantes ocurridos en la guerra fría acerca del ajedrez.';
+    document.querySelector('.projects-box-text-multisearch').innerHTML = 'Esta página web es más un motor de busqueda más que otra cosa, aunque es algo diferente al resto ya que usa motores de busqueda de terceros de forma aleatoria para incrementar la privacidad.';
+    document.querySelector('.projects-box-text-wordmeaning').innerHTML = 'Esta página es un diccionario online para angoparlantes e hispanoablantes, cualquier palabra que no comprendas, tipéala en WORDMEANING y te redireccionará a un diccionario online oficial.';
+    for (i=0; i<document.querySelectorAll('.project-box-link').length; i++) {
+        document.querySelectorAll('.project-box-link')[i].innerHTML = 'Visitar';
+    }
 }
 
 if (navigator.language == 'es-ES') {
     languageChanger();
 }
-
 
 document.getElementById('body').style.height = '100%';
 document.getElementById('body').style.overflowY = 'hidden';
@@ -34,14 +41,17 @@ if (getRandomNumber(0,2) < 2) {
         document.getElementById('body').style.height = 'initial';
         document.getElementById('body').style.overflowY = 'initial';
         document.getElementById('loading').style.animation = 'none';
-    }, 5000)
+    }, 2000)
 }
 
 
 let navBar = document.getElementById("nav");
 let navBarContentContainer = document.querySelectorAll(".nav-content-container")
+
 let whoamiTitle = document.querySelector(".whoami-title");
 let whoamiText = document.querySelector(".whoami-text");
+
+let projectsBox = document.querySelectorAll('.projects-box');
 
 document.addEventListener("scroll", ()=>{
     const scrollY = window.scrollY;
@@ -62,5 +72,10 @@ document.addEventListener("scroll", ()=>{
     let whoamiTextRect = whoamiText.getBoundingClientRect();
     if (whoamiTextRect.bottom < window.innerHeight - revealPoint2) {
         whoamiText.style.animation = 'whoamiTextAppear 1s forwards';
+    }
+    for (i=0; i<projectsBox.length; i++) {
+        if (projectsBox[i].getBoundingClientRect().bottom < window.innerHeight + 0) {
+            projectsBox[i].style.animation = 'projectsBox 1s forwards'
+        }
     }
 })
