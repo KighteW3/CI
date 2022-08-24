@@ -1,4 +1,5 @@
 const languageChanger = ()=> {
+    document.getElementById("loading").innerHTML = 'Cargando...';
     document.querySelectorAll(".nav-links")[0].innerHTML = 'Inicio';
     document.querySelectorAll(".nav-links")[1].innerHTML = 'Contenido';
     document.querySelectorAll(".nav-links")[2].innerHTML = 'Contacto';
@@ -10,6 +11,17 @@ const languageChanger = ()=> {
 if (navigator.language == 'es-ES') {
     languageChanger();
 }
+
+
+document.getElementById('body').style.height = '100%';
+document.getElementById('body').style.overflowY = 'hidden';
+
+setTimeout(()=> {
+    document.getElementById('loading-container').style.display = 'none';
+    document.getElementById('body').style.height = 'initial';
+    document.getElementById('body').style.overflowY = 'initial';
+    document.getElementById('loading').style.animation = 'none';
+}, 2000)
 
 let navBar = document.getElementById("nav");
 let navBarContentContainer = document.querySelectorAll(".nav-content-container")
@@ -34,6 +46,6 @@ document.addEventListener("scroll", ()=>{
     let revealPoint2 = 0;
     let whoamiTextRect = whoamiText.getBoundingClientRect();
     if (whoamiTextRect.bottom < window.innerHeight - revealPoint2) {
-        whoamiText.style.animation = 'whoamiTextAppear 2s forwards';
+        whoamiText.style.animation = 'whoamiTextAppear 1s forwards';
     }
 })
