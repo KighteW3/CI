@@ -34,6 +34,6 @@ document.addEventListener("scroll", ()=>{
     let revealPoint2 = 0;
     let whoamiTextRect = whoamiText.getBoundingClientRect();
     if (whoamiTextRect.bottom < window.innerHeight - revealPoint2) {
-        whoamiText.style.animation = 'whoamiTextAppear 1s forwards';
+        whoamiText.style.animation = 'whoamiTextAppear 2s forwards';
     }
 })
