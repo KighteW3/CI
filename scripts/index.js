@@ -28,7 +28,9 @@ function getRandomNumber(min, max) {
     return Math.round(randomize);
 }
 
-if (getRandomNumber(0,2) < 2) {
+OperativeSystem = navigator.userAgent;
+
+if (OperativeSystem.indexOf('Linux') | OperativeSystem.indexOf('Windows NT 10.0')) {
     setTimeout(()=> {
         document.getElementById('loading-container').style.display = 'none';
         document.getElementById('body').style.height = 'initial';
@@ -41,7 +43,11 @@ if (getRandomNumber(0,2) < 2) {
         document.getElementById('body').style.height = 'initial';
         document.getElementById('body').style.overflowY = 'initial';
         document.getElementById('loading').style.animation = 'none';
-    }, 2000)
+    }, 10000)
+}
+
+if (screen.height < 600) {
+    document.querySelector('.introduction-container').style.height = '100vh';
 }
 
 
@@ -74,7 +80,7 @@ document.addEventListener("scroll", ()=>{
         whoamiText.style.animation = 'whoamiTextAppear 1s forwards';
     }
     for (i=0; i<projectsBox.length; i++) {
-        if (projectsBox[i].getBoundingClientRect().bottom < window.innerHeight + 90) {
+        if (projectsBox[i].getBoundingClientRect().bottom < window.innerHeight + 150) {
             projectsBox[i].style.animation = 'projectsBox 1s forwards'
         }
     }
