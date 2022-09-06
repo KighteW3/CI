@@ -501,8 +501,111 @@ body {
 
 .contact-box-container {
     width: 100%;
-    height: 40%;
+    display: flex;
+    background: #000;
+}
+
+.contact-box {
+    width: 100%;
+    margin: 150px 0;
     background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-content-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.contact-content-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-content-text h2 {
+    margin: 0 0 15px 0;
+    font-size: 35px;
+    color: #d04;
+}
+
+.contact-content-text h2::selection {
+    background: #d04;
+    color: #fff;
+}
+
+.contact-content-text p {
+    margin: 0 0 45px 0;
+    font-size: 20px;
+}
+
+.contact-content-text p::selection {
+    background: #000;
+    color: #fff;
+}
+
+.contact-content-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-content-form-inputs {
+    margin: 0 10px;
+}
+
+.contact-content-form-submit {
+    margin: 0 10px;
+}
+
+.contact-content-form-whoami {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-content-form-inputs-whoami {
+    border: none;
+    border-bottom: 2px solid #a02;
+    margin: 10px 0;
+    color: #000;
+    outline: none;
+    padding: 4px 10px;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+.contact-content-form-inputs-whoami::placeholder {
+    color: #000a;
+}
+
+.contact-content-form-inputs-whoami:focus {
+    border-bottom: 2px solid #d04
+}
+
+.contact-content-form-inputs-whoami::selection {
+    background: #000;
+    color: #fff;
+}
+
+#contact-content-form-messange {
+    border: 2px solid #a02;
+    border-radius: 8px;
+    width: 100%;
+    resize: vertical;
+    min-height: 80px;
+    padding: 10px 30px;
+}
+
+#contact-content-form-messange:focus {
+    border: 2px solid #d04;
 }
 
 @media only screen and (max-width: 1468px) {
