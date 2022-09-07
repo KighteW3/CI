@@ -14,6 +14,11 @@ const languageChanger = ()=> {
     for (i=0; i<document.querySelectorAll('.project-box-link').length; i++) {
         document.querySelectorAll('.project-box-link')[i].innerHTML = 'Visitar';
     }
+    document.querySelector('.contact-content-text-h2').innerHTML = 'Contácteme';
+    document.querySelector('.contact-content-text-p').innerHTML = 'Complete los cuadros siguientes para enviar el mail satisfactoriamente';
+    document.getElementById('contact-content-form-name').placeholder = 'Nombre...';
+    document.getElementById('contact-content-form-surname').placeholder = 'Apellido...';
+    document.getElementById('contact-content-form-messange').placeholder = 'Escriba aquí su mensaje...';
 }
 
 if (navigator.language == 'es-ES') {
@@ -108,6 +113,11 @@ contactSubmit.addEventListener('click', (e)=> {
     let surname = document.getElementById('contact-content-form-surname').value;
     let messange = document.getElementById('contact-content-form-messange').value;
     let location = window.location.hostname;
-    let link = 'mailto:kighte143@gmail.com?&subject=Grettings%20from:%20 ' + ` ${location}` + '&body=Name: ' + `${name}, ` + 'Surname: ' + `${surname}, ` + 'Content: ' + `${messange}`;
+    let link = 'mailto:kighte143@gmail.com?&subject=Grettings%20from%20 ' + ` ${location}` + '&body=Name: ' + `${name}, ` + 'Surname: ' + `${surname}, ` + 'Content: ' + `${messange}`;
     window.open(link);
 })
+
+/* Bugs to fix: 
+1. Required on contacts inputs with e.preventDefault.
+2. Submit resize when messange texarea is resized.
+*/
