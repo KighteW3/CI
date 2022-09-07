@@ -108,6 +108,6 @@ contactSubmit.addEventListener('click', (e)=> {
     let surname = document.getElementById('contact-content-form-surname').value;
     let messange = document.getElementById('contact-content-form-messange').value;
     let location = window.location.hostname;
-    let link = 'mailto:kighte143@gmail.com?&subject=Grettings%20from%20' + ' ' + `%20${location}` + '&body=Name: ' + `${name}, ` + 'Surname: ' + `${surname}, ` + 'Content: ' + `${messange}`;
+    let link = 'mailto:kighte143@gmail.com?&subject=Grettings%20from%20 ' + ` ${location}` + '&body=Name: ' + `${name}, ` + 'Surname: ' + `${surname}, ` + 'Content: ' + `${messange}`;
     window.open(link);
 })
