@@ -475,7 +475,7 @@ body {
 }
 
 .projects-box-text-container p::selection {
-    background: #fff;
+    background: #f8f8f8;
     color: #050505;
 }
 
@@ -508,7 +508,7 @@ body {
 .contact-box {
     width: 100%;
     margin: 150px 0;
-    background: #fff;
+    background: #f8f8f8;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -538,7 +538,7 @@ body {
 
 .contact-content-text h2::selection {
     background: #d04;
-    color: #fff;
+    color: #f8f8f8;
 }
 
 .contact-content-text p {
@@ -548,7 +548,7 @@ body {
 
 .contact-content-text p::selection {
     background: #000;
-    color: #fff;
+    color: #f8f8f8;
 }
 
 .contact-content-form {
@@ -580,6 +580,7 @@ body {
     padding: 4px 10px;
     font-size: 20px;
     box-sizing: border-box;
+    background: #f8f8f8;
 }
 
 .contact-content-form-inputs-whoami::placeholder {
@@ -592,20 +593,54 @@ body {
 
 .contact-content-form-inputs-whoami::selection {
     background: #000;
-    color: #fff;
+    color: #f8f8f8;
+}
+
+.contact-content-form-messange-container {
+    width: 100%;
+    display: flex;
 }
 
 #contact-content-form-messange {
     border: 2px solid #a02;
     border-radius: 8px;
-    width: 100%;
+    width: 60%;
     resize: vertical;
     min-height: 80px;
     padding: 10px 30px;
+    transition: 0.5s;
+    margin: 10px 0;
 }
 
 #contact-content-form-messange:focus {
     border: 2px solid #d04;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.contact-content-form-submit-container {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-content-form-submit {
+    height: 70%;
+    background: none;
+    border: none;
+    padding: none;
+    margin: none;
+    cursor: pointer;
+    position: relative;
+    margin: 10px 10px;
+    background: url(../sources/mailto.png);
+    background-repeat: none;
+    background-size: contain;
+}
+
+#contact-content-form-submit:hover {
+    filter: drop-shadow(1px 1px 20px #888);
 }
 
 @media only screen and (max-width: 1468px) {

@@ -50,6 +50,12 @@ if (screen.height < 600) {
     document.querySelector('.introduction-container').style.height = '100vh';
 }
 
+window.addEventListener('offline', ()=> {
+    introductionIframe = document.querySelector('.introduction-iframe');
+    introductionIframe.innerHTML = ' ';
+    introductionIframe.style.background = '#000';
+})
+
 
 let navBar = document.getElementById("nav");
 let navBarContentContainer = document.querySelectorAll(".nav-content-container")
@@ -84,4 +90,24 @@ document.addEventListener("scroll", ()=>{
             projectsBox[i].style.animation = 'projectsBox 1s forwards'
         }
     }
+})
+
+function formSubmitWidth() {
+    let element = document.getElementById('contact-content-form-submit');
+    let height = document.getElementById('contact-content-form-submit').offsetHeight;
+    element.style.width = `${height}px`;
+}
+
+formSubmitWidth();
+
+let contactSubmit = document.getElementById('contact-content-form-submit');
+
+contactSubmit.addEventListener('click', (e)=> {
+    e.preventDefault;
+    let name = document.getElementById('contact-content-form-name').value;
+    let surname = document.getElementById('contact-content-form-surname').value;
+    let messange = document.getElementById('contact-content-form-messange').value;
+    let location = window.location.hostname;
+    let link = 'mailto:kighte143@gmail.com?&subject=Grettings%20from' + `${location}` + '&body=Name: ' + `${name}, ` + 'Surname: ' + `${surname}, ` + 'Content: ' + `${messange}`;
+    window.open(link);
 })
