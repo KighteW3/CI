@@ -107,17 +107,54 @@ formSubmitWidth();
 
 let contactSubmit = document.getElementById('contact-content-form-submit');
 
+
+let nameForm = document.getElementById('contact-content-form-name');
+let surnameForm = document.getElementById('contact-content-form-surname');
+let messangeForm = document.getElementById('contact-content-form-messange');
+
 contactSubmit.addEventListener('click', (e)=> {
     e.preventDefault;
-    let name = document.getElementById('contact-content-form-name').value;
-    let surname = document.getElementById('contact-content-form-surname').value;
-    let messange = document.getElementById('contact-content-form-messange').value;
-    let location = window.location.hostname;
-    let link = 'mailto:kighte143@gmail.com?&subject=Grettings%20from%20 ' + ` ${location}` + '&body=Name: ' + `${name}, ` + 'Surname: ' + `${surname}, ` + 'Content: ' + `${messange}`;
-    window.open(link);
+    error = formValidate();
+    if (error[0]) {
+        for (i=1; i<4; i++){
+            if (error[1] === i) {
+                error[2].placeholder = `${error[3]}`;
+                error[2].value = '';
+            }
+        }
+    } else {
+        let location = window.location.hostname;
+        let link = 'mailto:kighte143@gmail.com?&subject=Grettings%20from%20 ' + ` ${location}` + '&body=Name: ' + `${nameForm}, ` + 'Surname: ' + `${surnameForm}, ` + 'Content: ' + `${messangeForm}`;
+        window.open(link);
+    }
 })
 
-/* Bugs to fix: 
-1. Required on contacts inputs with e.preventDefault.
-2. Submit resize when messange texarea is resized.
-*/
+function formValidate() {
+    error = [];
+    if (nameForm.value.length <= 2 || nameForm.value.length >= 15) {
+        error[0] = true;
+        error[1] = 1;
+        error[2] = nameForm;
+        error[3] = 'Invalid name';
+        return error;
+    } else if (surnameForm.value.length <= 2 || surnameForm.value.length >= 15) {
+        error[0] = true;
+        error[1] = 2;
+        error[2] = surnameForm;
+        error[3] = 'Invalid surname';
+        return error;
+    } else if (messangeForm.value.length < 10 || messangeForm.value.length > 500) {
+        error[0] = true;
+        error[1] = 3;
+        error[2] = messangeForm;
+        if (messangeForm.value.length < 10) {
+            error[3] = 'Not enough characters...';
+        } else if (messangeForm.value.length > 500) {
+            error[3] = 'So many characters...';
+        }
+        return error;
+    } else {
+        error[0] = false;
+        return error;
+    }
+}

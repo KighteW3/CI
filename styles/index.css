@@ -512,6 +512,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .contact-content-container{
@@ -626,8 +627,8 @@ body {
 }
 
 #contact-content-form-submit {
-    height: 70%;
-    background: none;
+    height: 70px;
+    box-sizing: border-box;
     border: none;
     padding: none;
     margin: none;
