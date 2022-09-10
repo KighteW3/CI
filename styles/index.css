@@ -739,11 +739,21 @@ body {
     }
     #YouTubeVideo {
         width: 300%;
-        height: 100%;
-        left: -100%;
+        height: 120%;
+        left: -150%;
         position: absolute;
         top: 0;
         box-sizing: border-box;
+    }
+    .whoami-title-container {
+        font-size: 40px;
+    }
+    .whoami-text-container {
+        width: 85%;
+        font-size: 20px;
+    }
+    .projects-title-container {
+        font-size:  40px;
     }
 }
 
