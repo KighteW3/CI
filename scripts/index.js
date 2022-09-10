@@ -127,7 +127,7 @@ contactSubmit.addEventListener('click', (e)=> {
         let link = 'mailto:kighte143@gmail.com?&subject=Grettings%20from%20 ' + ` ${location}` + '&body=Name: ' + `${nameForm.value}, ` + 'Surname: ' + `${surnameForm.value}, ` + 'Content: ' + `${messangeForm.value}`;
         window.open(link);
     }
-})
+});
 
 function formValidate() {
     error = [];
@@ -158,3 +158,19 @@ function formValidate() {
         return error;
     }
 }
+
+/*let links = document.querySelectorAll('.social-content-links');
+
+for (i=0; i<links.length; i++) {
+    links[i].addEventListener('mouseover', ()=>{
+        socialMediaButtonOver();
+    });
+}
+
+function socialMediaButtonOver() {
+    let linksImg = document.querySelectorAll('.social-content-links-img');
+    for (i=0; i<linksImg.length; i++) {
+        x = i;
+        linksImg[x].style.animaiton = 'socialMediaButtonOut 1s forwards'
+    }
+}*/

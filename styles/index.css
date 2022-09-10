@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: #444;
 }
@@ -673,10 +677,10 @@ body {
     height: 70px;
     background:  none;
     border-radius:  13px;
-    border: 3px solid #f8f8f8;
     margin: 0 15px;
     display: flex;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .social-content-links-a {
@@ -687,11 +691,38 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 3px solid #f8f8f8;
+    border-radius: inherit;
+    box-sizing: border-box;
+    filter: opacity(50%);
+}
+
+.social-content-links-a:hover {
+    filter: opacity(100%);
+    transition: 1s;
 }
 
 .social-content-links-img {
     width: 70%;
 }
+
+@keyframes socialMediaButtonOver {
+    0%{
+        filter: opacity(50%);
+    }
+    100%{
+        filter: opacity(100%);
+    }
+}
+
+/*@keyframes socialMediaButtonOut {
+    0%{
+        filter: opacity(50%);
+    }
+    100%{
+        filter: opacity(100%);
+    }
+}*/
 
 @media only screen and (max-width: 1468px) {
     .projects-box-img-container img {
