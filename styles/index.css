@@ -141,17 +141,18 @@ body {
 
 .introduction-container {
     width: 100%;
-    height: 800px;
+    min-height:  445px;
+    height: 90vh;
     display: flex;
+    overflow: hidden;
+    align-items: center;
+    position: relative;
+    background-size: 300% 100%;
 }
 
 .introduction-iframe {
     width: inherit;
     height: inherit;
-    overflow-y: hidden;
-    display: flex;
-    align-items: center;
-    z-index: -50;
 }
 
 #YouTubeVideo {
@@ -163,8 +164,8 @@ body {
 
 .introduction-content-container {
     position: absolute;
-    width: inherit;
-    height: inherit;
+    width: 100%;
+    height: 100%;
     background: #3002;
     display: flex;
     justify-content: center;
@@ -728,5 +729,66 @@ body {
     .projects-box-img-container img {
         width: 90%;
         border-radius: 8px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .introduction-container {
+        position: relative;
+        overflow: hidden;
+    }
+    #YouTubeVideo {
+        width: 300%;
+        height: 100%;
+        left: -100%;
+        position: absolute;
+        top: 0;
+        box-sizing: border-box;
+    }
+}
+
+@media only screen and (max-width: 763px) {
+    .introduction-content1-title {
+        grid-template-columns: auto;
+    }
+    .introduction-content1-title-img {
+        display: none;
+    }
+    .nav-content-container-1 {
+        display: none;
+    }
+    .nav-content-container-2 {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 744px) {
+    .projects-box {
+        width:  100%;
+        border-left: none;
+        border-right: none;
+        flex-direction: column;
+    }
+    .projects-box-img-container {
+        width: 100%;
+    }
+    .projects-box-img-container img {
+        border-radius: 0 0 13px 13px;
+    }
+    .projects-box-text-container {
+        width: 90%;
+    }
+    .contact-content-form-whoami {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact-content-form-messange-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .social-content-links-a {
+        filter: none;
     }
 }
