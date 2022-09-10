@@ -740,7 +740,7 @@ body {
     #YouTubeVideo {
         width: 300%;
         height: 120%;
-        left: -150%;
+        left: -100%;
         position: absolute;
         top: 0;
         box-sizing: border-box;
@@ -754,6 +754,9 @@ body {
     }
     .projects-title-container {
         font-size:  40px;
+    }
+    #contact-content-form-messange {
+        min-height: 160px;
     }
 }
 
@@ -786,7 +789,7 @@ body {
         border-radius: 0 0 13px 13px;
     }
     .projects-box-text-container {
-        width: 90%;
+        width: 100%;
     }
     .contact-content-form-whoami {
         flex-direction: column;
