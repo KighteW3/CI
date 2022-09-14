@@ -342,7 +342,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: justify;
     /* color: #b5b5b5; */
     color: #fff;
     font-size: 30px;
@@ -757,11 +757,20 @@ body {
 }
 
 .CC-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CC {
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     color: #848484;
+    text-align: center;
 }
 
 .blank-space {
@@ -818,6 +827,9 @@ body {
     }
     .social-content-links-img {
         width: 70%;
+    }
+    .social-text-content-p {
+        width: 80%;
     }
 }
 
