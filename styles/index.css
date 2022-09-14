@@ -696,6 +696,7 @@ body {
     border-radius: 50%;
     box-sizing: border-box;
     filter: opacity(50%);
+    user-select: none;
 }
 
 .social-content-links-a:hover {
@@ -745,9 +746,14 @@ body {
     text-align: justify;
 }
 
-.social-text-content p {
+.social-text-content-p {
     width: 40%;
     margin: 10px;
+}
+
+.social-text-content-p::selection {
+    color: #000;
+    background: #848484;
 }
 
 .CC-container {
