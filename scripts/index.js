@@ -14,11 +14,14 @@ const languageChanger = ()=> {
     for (i=0; i<document.querySelectorAll('.project-box-link').length; i++) {
         document.querySelectorAll('.project-box-link')[i].innerHTML = 'Visitar';
     }
-    document.querySelector('.contact-content-text-h2').innerHTML = 'Contácteme';
-    document.querySelector('.contact-content-text-p').innerHTML = 'Complete los cuadros siguientes para enviar el mail satisfactoriamente';
+    document.querySelector('.contact-content-text-h2').innerHTML = 'Contáctame';
+    document.querySelector('.contact-content-text-p').innerHTML = 'Complete los siguientes cuadros para enviar el mail satisfactoriamente';
     document.getElementById('contact-content-form-name').placeholder = 'Nombre...';
     document.getElementById('contact-content-form-surname').placeholder = 'Apellido...';
     document.getElementById('contact-content-form-messange').placeholder = 'Escriba aquí su mensaje...';
+    document.getElementById('social-text-content-p-1').innerHTML = 'En caso de sujerencia o recomendación de proyectos, tanto como para contacto o cualquier otro motivo por el cual se requiera una interacción conmigo; rellenar el formulario del apartado de contacto y enviar el email.';
+    document.getElementById('social-text-content-p-2').innerHTML = `Esta página es de código abierto y no alberga ningún cookie o dato de sitio más allá de las configuraciones de tu navegador y las API's de terceros utilizadas.`;
+    document.getElementById('social-text-content-p-3').innerHTML = 'En caso de problemas a la hora de rellenar el formulario y/o enviar el email; puedes enviar un correo email de forma convencional mediante cualquier cliente a esta dirección: kighte143@gmail.com .  Eso sí, poniendo el nombre completo y motivo de contacto.';
 }
 
 if (navigator.language == 'es-ES') {
