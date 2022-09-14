@@ -21,7 +21,7 @@ const languageChanger = ()=> {
     document.getElementById('contact-content-form-messange').placeholder = 'Escriba aquí su mensaje...';
     document.getElementById('social-text-content-p-1').innerHTML = 'En caso de sujerencia o recomendación de proyectos, tanto como para contacto o cualquier otro motivo por el cual se requiera una interacción conmigo; rellenar el formulario del apartado de contacto y enviar el email.';
     document.getElementById('social-text-content-p-2').innerHTML = `Esta página es de código abierto y no alberga ningún cookie o dato de sitio más allá de las configuraciones de tu navegador y las API's de terceros utilizadas.`;
-    document.getElementById('social-text-content-p-3').innerHTML = 'En caso de problemas a la hora de rellenar el formulario y/o enviar el email; puedes enviar un correo email de forma convencional mediante cualquier cliente a esta dirección: kighte143@gmail.com .  Eso sí, poniendo el nombre completo y motivo de contacto.';
+    document.getElementById('social-text-content-p-3').innerHTML = 'En caso de problemas a la hora de rellenar el formulario y/o enviar el email; puedes enviar un correo email de forma estándar mediante cualquier cliente a esta dirección: kighte143@gmail.com .  Eso sí, poniendo el nombre completo y motivo de contacto.';
 }
 
 if (navigator.language == 'es-ES') {
