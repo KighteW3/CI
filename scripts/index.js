@@ -178,6 +178,28 @@ function formValidate() {
     }
 }
 
+document.querySelector('.introduction-container').innerHTML = `
+                <iframe id="YouTubeVideo" data-video-id="a7_e_NY-f3g" frameborder="0" allow="accelerometer; autoplay; fullscreen; clipboard-write; encrypted-media; gyroscope; picture-in-picture" width="1280" height="720" src="https://www.youtube.com/embed/e97Xe7544Yg?autoplay=1&mute=1&loop=1&autopause=0;autohide=0&amp;branding=0&amp;cc_load_policy=0&amp;controls=0&amp;fs=0&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;quality=hd720&amp;rel=0&amp;showinfo=0&amp;wmode=opaque&amp;enablejsapi=1&amp;origin=https%3A%2F%2Ffirmerch.com&amp;widgetid=1" tabindex="-1" allowfullscreen></iframe>
+                <div class="introduction-content-container">
+                    <div class="introduction-content-subcontainer">
+                        <div class="introduction-content introduction-content1">
+                            <div class="introduction-content1-title">
+                                <div class="introduction-content1-title-img">
+                                    <img src="sources/imaginaza.jpg" alt="">
+                                </div>
+                                <div class="introduction-content1-title-content">
+                                    <h1 class="introduction-title-link-margin">EMANUEL<br>ASANDEI</h1>
+                                    <div class="introduction-content2-container">
+                                        <a class="introduction-title-link-margin introduction-title-link-button" href="#second-article">More info</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="introduction-content introduction-content2">
+                        </div>
+                    </div>
+                </div>`
+
 /*let links = document.querySelectorAll('.social-content-links');
 
 for (i=0; i<links.length; i++) {
