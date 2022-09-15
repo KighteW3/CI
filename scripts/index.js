@@ -31,10 +31,10 @@ if (navigator.language == 'es-ES') {
 document.getElementById('body').style.height = '100%';
 document.getElementById('body').style.overflowY = 'hidden';
 
-function getRandomNumber(min, max) {
+/*function getRandomNumber(min, max) {
     let randomize = Math.random() * (max - min) + min;
     return Math.round(randomize);
-}
+}*/
 
 OperativeSystem = navigator.userAgent;
 
@@ -58,11 +58,11 @@ if (screen.height < 600) {
     document.querySelector('.introduction-container').style.height = '100vh';
 }
 
-window.addEventListener('offline', ()=> {
+/*window.addEventListener('offline', ()=> {
     introductionIframe = document.querySelector('.introduction-iframe');
     introductionIframe.innerHTML = ' ';
     introductionIframe.style.background = '#000';
-})
+})*/
 
 
 let navBar = document.getElementById("nav");
@@ -72,6 +72,10 @@ let whoamiTitle = document.querySelector(".whoami-title");
 let whoamiText = document.querySelector(".whoami-text");
 
 let projectsBox = document.querySelectorAll('.projects-box');
+
+let contactContentTextH2 = document.querySelector('.contact-content-text-h2');
+let contactContentTextP = document.querySelector('.contact-content-text-p');
+let contactContentFormContainer = document.querySelector('.contact-content-form-inputs');
 
 document.addEventListener("scroll", ()=>{
     const scrollY = window.scrollY;
@@ -97,6 +101,18 @@ document.addEventListener("scroll", ()=>{
         if (projectsBox[i].getBoundingClientRect().bottom < window.innerHeight + 150) {
             projectsBox[i].style.animation = 'projectsBox 1s forwards';
         }
+    }
+    let contactContentTextH2Rect = contactContentTextH2.getBoundingClientRect();
+    if (contactContentTextH2Rect.bottom < window.innerHeight - 150) {
+        contactContentTextH2.style.animation = 'projectsBox 1s forwards';
+    }
+    let contactContentTextPRect = contactContentTextP.getBoundingClientRect();
+    if (contactContentTextPRect.bottom < window.innerHeight - 150) {
+        contactContentTextP.style.animation = 'projectsBox 1s forwards';
+    }
+    let contactContentFormContainerRect = contactContentFormContainer.getBoundingClientRect();
+    if (contactContentFormContainerRect.bottom < window.innerHeight - 0) {
+        contactContentFormContainer.style.animation = 'projectsBox 1s forwards';
     }
 })
 

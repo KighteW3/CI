@@ -475,7 +475,7 @@ body {
 .projects-box-text-container p {
     font-size: 20px;
     color: #fff;
-    text-align: center;
+    text-align: justify;
     margin: 30px 50px;
 }
 
@@ -540,6 +540,7 @@ body {
     margin: 0 0 15px 0;
     font-size: 35px;
     color: #d04;
+    opacity: 0;
 }
 
 .contact-content-text h2::selection {
@@ -550,6 +551,7 @@ body {
 .contact-content-text p {
     margin: 0 0 45px 0;
     font-size: 20px;
+    opacity: 0;
 }
 
 .contact-content-text p::selection {
@@ -565,6 +567,7 @@ body {
 
 .contact-content-form-inputs {
     margin: 0 10px;
+    opacity: 0;
 }
 
 .contact-content-form-submit {
