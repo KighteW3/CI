@@ -38,12 +38,10 @@ document.getElementById('body').style.overflowY = 'hidden';
 }*/
 
 function turnLoadingScreenOff() {
-    setTimeout(()=> {
-        document.getElementById('loading-container').style.display = 'none';
-        document.getElementById('body').style.height = 'initial';
-        document.getElementById('body').style.overflowY = 'initial';
-        document.getElementById('loading').style.animation = 'none';
-    }, 1000)
+    document.getElementById('loading-container').style.display = 'none';
+    document.getElementById('body').style.height = 'initial';
+    document.getElementById('body').style.overflowY = 'initial';
+    document.getElementById('loading').style.animation = 'none';
 }
 
 
