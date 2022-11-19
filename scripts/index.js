@@ -37,33 +37,12 @@ document.getElementById('body').style.overflowY = 'hidden';
     return Math.round(randomize);
 }*/
 
-OperativeSystem = navigator.userAgent;
-
-if (OperativeSystem.indexOf('Linux') | OperativeSystem.indexOf('Windows NT 10.0')) {
-    setTimeout(()=> {
-        document.getElementById('loading-container').style.display = 'none';
-        document.getElementById('body').style.height = 'initial';
-        document.getElementById('body').style.overflowY = 'initial';
-        document.getElementById('loading').style.animation = 'none';
-    }, 2000)
-} else {
-    setTimeout(()=> {
-        document.getElementById('loading-container').style.display = 'none';
-        document.getElementById('body').style.height = 'initial';
-        document.getElementById('body').style.overflowY = 'initial';
-        document.getElementById('loading').style.animation = 'none';
-    }, 10000)
+function turnLoadingScreenOff() {
+    document.getElementById('loading-container').style.display = 'none';
+    document.getElementById('body').style.height = 'initial';
+    document.getElementById('body').style.overflowY = 'initial';
+    document.getElementById('loading').style.animation = 'none';
 }
-
-if (screen.height < 600) {
-    document.querySelector('.introduction-container').style.height = '100vh';
-}
-
-/*window.addEventListener('offline', ()=> {
-    introductionIframe = document.querySelector('.introduction-iframe');
-    introductionIframe.innerHTML = ' ';
-    introductionIframe.style.background = '#000';
-})*/
 
 
 let navBar = document.getElementById("nav");
