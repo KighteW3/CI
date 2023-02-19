@@ -123,7 +123,7 @@ contactSubmit.addEventListener('click', (e)=> {
         }
     } else {
         let location = window.location.hostname;
-        let link = 'mailto:kighte143@gmail.com?&subject=Grettings%20from%20 ' + ` ${location}` + '&body=Name: ' + `${nameForm.value}, ` + 'Surname: ' + `${surnameForm.value}, ` + 'Content: ' + `${messangeForm.value}`;
+        let link = 'mailto:emanuelwdev@gmail.com@gmail.com?&subject=Grettings%20from%20 ' + ` ${location}` + '&body=Name: ' + `${nameForm.value}, ` + 'Surname: ' + `${surnameForm.value}, ` + 'Content: ' + `${messangeForm.value}`;
         window.open(link);
     }
 });
