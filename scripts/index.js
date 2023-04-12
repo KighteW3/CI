@@ -5,7 +5,7 @@ const languageChanger = ()=> {
     document.querySelectorAll(".nav-links")[2].innerHTML = 'Contacto';
     document.querySelector(".introduction-title-link-button").innerHTML = 'Más info';
     document.querySelector(".whoami-title").innerHTML = '¿Quién soy?';
-    document.querySelector(".whoami-text").innerHTML = 'Mi nombre es Emanuel Asandei, tengo 18 años y soy un desarrollador web front-end. Suelo dedicarle mucho tiempo a estudiar y practicar con las tecnologías relacionadas al campo y por eso mejoro con creces cada día, hasta la fecha manejo los tres pilares del desarrollo web, es decir; HTML, CSS y JavaScript.';
+    document.querySelector(".whoami-text").innerHTML = 'Mi nombre es Emanuel Asandei, tengo 19 años y soy un desarrollador web front-end. Suelo dedicarle mucho tiempo a estudiar y practicar con las tecnologías relacionadas al campo y por eso mejoro con creces cada día, hasta la fecha manejo los tres pilares del desarrollo web, es decir; HTML, CSS, JavaScript y React.';
     document.querySelector('.projects-title').innerHTML = 'Mis proyectos';
     document.querySelector('.projects-box-text-paimeman').innerHTML = 'Una página hecha para promocionar un excelente cómic escrito por un buen amigo, la trama va de dos chicos superhéroes.';
     document.querySelector('.projects-box-text-dragonballrandomgame').innerHTML = 'Un sencillo minijuego escrito en JavaScript que trata sobre comparar "poderes" con otros compañeros, está ambientado en el famoso anime/manga Dragon Ball.'
@@ -23,6 +23,7 @@ const languageChanger = ()=> {
     document.getElementById('social-text-content-p-1').innerHTML = 'En caso de sujerencia o recomendación de proyectos, tanto como para contacto o cualquier otro motivo por el cual se requiera una interacción conmigo; rellenar el formulario del apartado de contacto y enviar el email.';
     document.getElementById('social-text-content-p-2').innerHTML = `Esta página es de código abierto y no alberga ningún cookie o dato de sitio más allá de las configuraciones de tu navegador y las API's de terceros utilizadas.`;
     document.getElementById('social-text-content-p-3').innerHTML = 'En caso de problemas a la hora de rellenar el formulario y/o enviar el email; puedes enviar un correo email de forma estándar mediante cualquier cliente a esta dirección: kighte143@gmail.com .  Eso sí, poniendo el nombre completo y motivo de contacto.';
+    document.getElementById('warning-messenge').innerHTML = 'Atención, este portfolio está obsoleto y dentro de un tiempo será reemplazado por una versión mejorada.';
 }
 
 if (navigator.language == 'es-ES') {
